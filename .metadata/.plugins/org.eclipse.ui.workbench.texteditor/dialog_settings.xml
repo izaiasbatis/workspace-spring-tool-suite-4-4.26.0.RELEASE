@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="true"/>
+	<list key="replacehistory">
+		<item value="Importar"/>
+		<item value="pro"/>
+		<item value="private"/>
+	</list>
+	<list key="searchhistory">
+		<item value="BaseService"/>
+		<item value="importar"/>
+		<item value="cli"/>
+		<item value="public"/>
+	</list>
+</section>

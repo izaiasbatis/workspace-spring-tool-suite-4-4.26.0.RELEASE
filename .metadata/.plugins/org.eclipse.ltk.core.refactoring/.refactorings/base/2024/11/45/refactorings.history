@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ClienteClasse.java&apos; to &apos;mercado/src/main/java/com.mercado.classe&apos;&#x0D;&#x0A;- Original project: &apos;base&apos;&#x0D;&#x0A;- Destination element: &apos;mercado/src/main/java/com.mercado.classe&apos;&#x0D;&#x0A;- Original element: &apos;com.base.classe.ClienteClasse.java&apos;" description="Copy compilation unit" destination="=mercado/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.mercado.classe" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.base.classe{ClienteClasse.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1730847403010" units="1" version="1.0"/>
+</session>

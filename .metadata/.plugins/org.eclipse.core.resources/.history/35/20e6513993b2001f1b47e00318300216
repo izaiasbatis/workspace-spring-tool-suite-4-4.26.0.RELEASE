@@ -1,0 +1,13 @@
+# Configuração do Banco de Dados
+spring.datasource.url=jdbc:mysql://localhost:3306/base?createDatabaseIfNotExist=true
+spring.datasource.username=root
+spring.datasource.password=senha
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# Configuração JPA
+spring.jpa.hibernate.ddl-auto=update  # Isso irá tentar atualizar o esquema do banco automaticamente
+  # Exibe as queries SQL executadas no console
+spring.jpa.properties.hibernate.format_sql=true  # Formata as queries SQL
+
+# Propriedade para desabilitar o "DataSource" de criação automática de esquemas, pois a criação da tabela será feita manualmente
+

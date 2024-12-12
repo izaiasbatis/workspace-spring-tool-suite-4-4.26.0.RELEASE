@@ -1,0 +1,13 @@
+package com.importar;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ImportarApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(BaseService.class, args);
+	}
+
+}

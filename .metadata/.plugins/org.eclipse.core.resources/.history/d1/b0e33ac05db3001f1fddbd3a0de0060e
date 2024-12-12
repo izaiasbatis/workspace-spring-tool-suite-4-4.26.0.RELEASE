@@ -1,0 +1,59 @@
+package com.exemplo.importacao.controller;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.stereotype.Controller;
+
+import javax.sql.DataSource;
+import java.io.InputStream;
+import java.util.List;
+
+@Controller
+@RequestMapping("/api/importacao")
+public class TableController {
+
+    @Value("${spring.datasource.url}")
+    private String url;
+
+    @Value("${spring.datasource.username}")
+    private String username;
+
+    @Value("${spring.datasource.password}")
+    private String password;
+
+    private final DataSource dataSource;
+
+    public TableController(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
+
+    @PostMapping("/upload")
+    public String uploadFile(@RequestParam("file") MultipartFile file) {
+        try {
+            // Lógica para processar o arquivo Excel (por exemplo, usando Apache POI)
+            InputStream inputStream = file.getInputStream();
+            List<List<String>> tableData = processExcelFile(inputStream);  // Método fictício para processar o arquivo
+            
+            // Cria a tabela com o nome do arquivo
+            String tableName = file.getOriginalFilename().replaceAll("\\.xlsx$", "").replaceAll(" ", "_");
+            createTableFromFile(tableName, tableData);
+
+            return "Tabela criada com sucesso: " + tableName;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "Erro ao processar o arquivo: " + e.getMessage();
+        }
+    }
+
+    // Método fictício para processar o arquivo Excel
+    private List<List<String>> processExcelFile(InputStream inputStream) {
+        // Usar Apache POI ou outra biblioteca para processar o arquivo Excel e retornar os dados
+        return null;  // Retornar os dados após processar o arquivo Excel
+    }
+
+    // Método fictício para criar a tabela no banco de dados
+    private void createTableFromFile(String tableName, List<List<String>> tableData) {
+        // Lógica para criar a tabela no banco de dados com base no arquivo
+    }
+}

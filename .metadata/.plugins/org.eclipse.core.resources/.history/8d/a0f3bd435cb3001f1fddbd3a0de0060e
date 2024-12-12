@@ -1,0 +1,5 @@
+package com.exemplo.importacao.service;
+
+public interface TableService {
+
+}
